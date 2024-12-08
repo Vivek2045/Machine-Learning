@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form method="post" action="/">
+        <label for="OverallQual">Overall Quality (1-10):</label>
+        <input type="number" name="OverallQual" id="OverallQual" required><br>
+
+        <label for="GrLivArea">Ground Living Area (sqft):</label>
+        <input type="number" name="GrLivArea" id="GrLivArea" required><br>
+
+        <label for="YearBuilt">Year Built (1940 - 2025):</label>
+        <input type="number" name="YearBuilt" id="YearBuilt" required><br>
+
+        <label for="TotalBsmtSF">Total Basement Area (sqft):</label>
+        <input type="number" name="TotalBsmtSF" id="TotalBsmtSF" required><br>
+
+        <!-- Add more input fields for other important features that the model needs -->
+        <label for="1stFlrSF">1st Floor Area (sqft):</label>
+        <input type="number" name="1stFlrSF" id="1stFlrSF"><br>
+
+        <label for="2ndFlrSF">2nd Floor Area (sqft):</label>
+        <input type="number" name="2ndFlrSF" id="2ndFlrSF"><br>
+
+        
+        
+        </select><br>
+
+        <label for="BedroomAbvGr">Bedrooms Above Ground:</label>
+        <input type="number" name="BedroomAbvGr" id="BedroomAbvGr"><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
